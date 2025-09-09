@@ -1,7 +1,6 @@
 const axios = require("axios");
-const headers = require("./headers.json");
+const headers = require("./headers.js");
 const parseData = require("./parser");
-
 async function fetchData(url) {
   try {
     const response = await axios.post(

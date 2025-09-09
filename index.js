@@ -7,7 +7,10 @@ const getData = require("./getData");
 
 app.use(
   cors({
-    origin: "https://deft-meringue-05fd1f.netlify.app",
+    origin:
+      process.env.DEV === "true"
+        ? process.env.CLIENT_URL_DEVELOPMENT
+        : process.env.CLIENT_URL_PRODUCTION,
     credentials: true,
   })
 );
