@@ -7,7 +7,7 @@ const getData = require("./getData");
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://deft-meringue-05fd1f.netlify.app/",
     credentials: true,
   })
 );
