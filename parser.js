@@ -10,7 +10,8 @@ const parseData = (html) => {
       const name = $(elem).find("a.rowLink").text().trim();
       const last = $(elem).find("td.Row.last").text().trim();
       const change = $(elem).find("span.changeP").text().trim();
-      const value = $(elem).find("b.valuemoney").text().trim();
+      const value =
+        parseFloat($(elem).find("b.valuemoney").text().trim()) * 1000;
       const profit = $(elem).find("td.Row.profitmoney").text().trim();
       const yieldValue = $(elem).find("span.changePAdd").text().trim();
 
